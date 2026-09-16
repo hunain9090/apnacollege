@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block content%}
+
+<h2>Edit Student</h2>
+<form method='post' action="{{url_for('editstudent',id=student._id)}}">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" name="name"  class="form-control" value="{{student.name}}">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" name="email" class="form-control" value="{{student.email}}">
+  </div>
+ <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input type="number" name="phone" class="form-control" value="{{student.phone}}">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Updatte</button>
+</form>
+{% endblock %}
